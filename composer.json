@@ -1,13 +1,13 @@
 {
     "name": "cbeyersdorf/easybill",
-    "description": "",
+    "description": "easybill PHP REST API Client (unoffical)",
     "keywords": [
         "swagger",
         "php",
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
+    "homepage": "https://www.iant.de",
     "license": "proprietary",
     "authors": [
         {
