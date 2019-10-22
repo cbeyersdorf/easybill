@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**customerGroupsIdDelete**](CustomerGroupApi.md#customerGroupsIdDelete) | **DELETE** /customer-groups/{id} | Delete customer group
 [**customerGroupsIdGet**](CustomerGroupApi.md#customerGroupsIdGet) | **GET** /customer-groups/{id} | Fetch customer group
 [**customerGroupsIdPut**](CustomerGroupApi.md#customerGroupsIdPut) | **PUT** /customer-groups/{id} | Update customer group
-[**customerGroupsPost**](CustomerGroupApi.md#customerGroupsPost) | **POST** /customer-groups | Create customer froup
+[**customerGroupsPost**](CustomerGroupApi.md#customerGroupsPost) | **POST** /customer-groups | Create customer group
 
 
 # **customerGroupsGet**
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 # **customerGroupsPost**
 > \cbeyersdorf\easybill\Model\CustomerGroup customerGroupsPost($body)
 
-Create customer froup
+Create customer group
 
 ### Example
 ```php

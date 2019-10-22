@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **discountsPositionGroupIdPut**
-> discountsPositionGroupIdPut($id, $body)
+> \cbeyersdorf\easybill\Model\DiscountPositionGroup discountsPositionGroupIdPut($id, $body)
 
 Update a position-group discount
 
@@ -289,7 +289,8 @@ $id = 789; // int | ID of the to be soon updated discount
 $body = new \cbeyersdorf\easybill\Model\DiscountPositionGroup(); // \cbeyersdorf\easybill\Model\DiscountPositionGroup | 
 
 try {
-    $apiInstance->discountsPositionGroupIdPut($id, $body);
+    $result = $apiInstance->discountsPositionGroupIdPut($id, $body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->discountsPositionGroupIdPut: ', $e->getMessage(), PHP_EOL;
 }
@@ -305,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\cbeyersdorf\easybill\Model\DiscountPositionGroup**](../Model/DiscountPositionGroup.md)
 
 ### Authorization
 
@@ -319,7 +320,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **discountsPositionGroupPost**
-> discountsPositionGroupPost($body)
+> \cbeyersdorf\easybill\Model\DiscountPositionGroup discountsPositionGroupPost($body)
 
 Create a new position-group discount
 
@@ -347,7 +348,8 @@ $apiInstance = new cbeyersdorf\easybill\Api\DiscountApi(
 $body = new \cbeyersdorf\easybill\Model\DiscountPositionGroup(); // \cbeyersdorf\easybill\Model\DiscountPositionGroup | 
 
 try {
-    $apiInstance->discountsPositionGroupPost($body);
+    $result = $apiInstance->discountsPositionGroupPost($body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->discountsPositionGroupPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -362,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\cbeyersdorf\easybill\Model\DiscountPositionGroup**](../Model/DiscountPositionGroup.md)
 
 ### Authorization
 
@@ -495,7 +497,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **discountsPositionIdPut**
-> discountsPositionIdPut($id, $body)
+> \cbeyersdorf\easybill\Model\DiscountPosition discountsPositionIdPut($id, $body)
 
 Update a position discount
 
@@ -524,7 +526,8 @@ $id = 789; // int | ID of the to be soon updated discount
 $body = new \cbeyersdorf\easybill\Model\DiscountPosition(); // \cbeyersdorf\easybill\Model\DiscountPosition | 
 
 try {
-    $apiInstance->discountsPositionIdPut($id, $body);
+    $result = $apiInstance->discountsPositionIdPut($id, $body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->discountsPositionIdPut: ', $e->getMessage(), PHP_EOL;
 }
@@ -540,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\cbeyersdorf\easybill\Model\DiscountPosition**](../Model/DiscountPosition.md)
 
 ### Authorization
 
@@ -554,7 +557,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **discountsPositionPost**
-> discountsPositionPost($body)
+> \cbeyersdorf\easybill\Model\DiscountPosition discountsPositionPost($body)
 
 Create a new position discount
 
@@ -582,7 +585,8 @@ $apiInstance = new cbeyersdorf\easybill\Api\DiscountApi(
 $body = new \cbeyersdorf\easybill\Model\DiscountPosition(); // \cbeyersdorf\easybill\Model\DiscountPosition | 
 
 try {
-    $apiInstance->discountsPositionPost($body);
+    $result = $apiInstance->discountsPositionPost($body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DiscountApi->discountsPositionPost: ', $e->getMessage(), PHP_EOL;
 }
@@ -597,7 +601,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\cbeyersdorf\easybill\Model\DiscountPosition**](../Model/DiscountPosition.md)
 
 ### Authorization
 

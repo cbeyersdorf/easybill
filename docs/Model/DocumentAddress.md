@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**salutation** | **string** |  | [optional] 
-**personal** | **string** |  | [optional] 
+**salutation** | **int** | 0: empty&lt;br/&gt; 1: Herrn&lt;br/&gt; 2: Frau&lt;br/&gt; 3: Firma&lt;br/&gt; 4: Herrn und Frau&lt;br/&gt; 5: Eheleute&lt;br/&gt; 6: Familie | [optional] 
+**personal** | **bool** |  | [optional] 
 **title** | **string** |  | [optional] 
 **first_name** | **string** |  | [optional] 
 **last_name** | **string** |  | [optional] 

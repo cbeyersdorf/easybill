@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **can_modify** | **bool** |  | [optional] 
 **id** | **int** |  | [optional] 
-**text** | **string** |  | [optional] 
+**text** | **string** |  | 
 **title** | **string** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date** | **string** |  | [optional] 
+**date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **code** | **int** |  | [optional] 
 **response** | **string** |  | [optional] 
 

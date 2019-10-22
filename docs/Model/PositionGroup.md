@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **string** |  | [optional] 
+**description** | **string** |  | [optional] [default to 'null']
 **login_id** | **int** |  | [optional] 
-**name** | **string** |  | [optional] 
-**number** | **string** |  | [optional] 
+**name** | **string** |  | 
+**number** | **string** |  | 
 **display_name** | **string** |  | [optional] 
 **id** | **int** |  | [optional] 
 

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **documentsGet**
-> \cbeyersdorf\easybill\Model\Documents documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country)
+> \cbeyersdorf\easybill\Model\Documents documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status)
 
 Fetch documents list
 
@@ -55,10 +55,11 @@ $number = "number_example"; // string | Filter documents by number.
 $cancel_id = "cancel_id_example"; // string | Filter documents by cancel_id. You can add multiple ids separate by comma like id,id,id. With cancel_id=null you get all not canceled documents.
 $fulfillment_country = "fulfillment_country_example"; // string | Filter documents by fulfillment_country.
 $vat_country = "vat_country_example"; // string | Filter documents by vat_country.
-$shipping_country = "shipping_country_example"; // string | Filter documents by shipping_country. documents.
+$shipping_country = "shipping_country_example"; // string | Filter documents by shipping_country.
+$status = "status_example"; // string | Filter documents by status. Keep in mind that not every document type has a status.
 
 try {
-    $result = $apiInstance->documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country);
+    $result = $apiInstance->documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DocumentApi->documentsGet: ', $e->getMessage(), PHP_EOL;
@@ -84,7 +85,8 @@ Name | Type | Description  | Notes
  **cancel_id** | **string**| Filter documents by cancel_id. You can add multiple ids separate by comma like id,id,id. With cancel_id&#x3D;null you get all not canceled documents. | [optional]
  **fulfillment_country** | **string**| Filter documents by fulfillment_country. | [optional]
  **vat_country** | **string**| Filter documents by vat_country. | [optional]
- **shipping_country** | **string**| Filter documents by shipping_country. documents. | [optional]
+ **shipping_country** | **string**| Filter documents by shipping_country. | [optional]
+ **status** | **string**| Filter documents by status. Keep in mind that not every document type has a status. | [optional]
 
 ### Return type
 
@@ -391,7 +393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **documentsIdPut**
-> \cbeyersdorf\easybill\Model\Document documentsIdPut($id, $body)
+> \cbeyersdorf\easybill\Model\Document documentsIdPut($id, $body, $refresh_customer_data)
 
 Update document
 
@@ -418,9 +420,10 @@ $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
 );
 $id = 789; // int | ID of document
 $body = new \cbeyersdorf\easybill\Model\Document(); // \cbeyersdorf\easybill\Model\Document | 
+$refresh_customer_data = true; // bool | Forces refreshing of the customer data.
 
 try {
-    $result = $apiInstance->documentsIdPut($id, $body);
+    $result = $apiInstance->documentsIdPut($id, $body, $refresh_customer_data);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DocumentApi->documentsIdPut: ', $e->getMessage(), PHP_EOL;
@@ -434,6 +437,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| ID of document |
  **body** | [**\cbeyersdorf\easybill\Model\Document**](../Model/Document.md)|  |
+ **refresh_customer_data** | **bool**| Forces refreshing of the customer data. | [optional]
 
 ### Return type
 

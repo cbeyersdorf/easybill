@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **string** |  | [optional] 
-**name** | **string** |  | [optional] 
-**number** | **string** |  | [optional] 
+**name** | **string** |  | 
+**description** | **string** |  | [optional] [default to 'null']
+**number** | **string** | Can be chosen freely | 
 **display_name** | **string** |  | [optional] 
 **id** | **int** |  | [optional] 
 

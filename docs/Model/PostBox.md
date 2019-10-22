@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **send_with_attachment** | **bool** |  | [optional] 
 **type** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
-**status_info** | **string** |  | [optional] 
+**status_msg** | **string** |  | [optional] 
 **login_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

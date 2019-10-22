@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **description** | **string** |  | 
 **events** | **string[]** |  | 
 **id** | **int** |  | [optional] 
-**is_active** | **bool** |  | [optional] 
+**is_active** | **bool** |  | [optional] [default to false]
 **last_response** | [**\cbeyersdorf\easybill\Model\WebHookLastResponse**](WebHookLastResponse.md) |  | [optional] 
 **secret** | **string** |  | 
 **url** | **string** |  | 
