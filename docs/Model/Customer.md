@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **acquire_options** | **int** | 1 &#x3D; Empfehlung eines anderen Kunden, 2 &#x3D; Zeitungsanzeige, 3 &#x3D; Eigene Akquisition, 4 &#x3D; Mitarbeiter Akquisition, 5 &#x3D; Google, 6 &#x3D; Gelbe Seiten, 7 &#x3D; Kostenlose Internet Plattform, 8 &#x3D; Bezahlte Internet Plattform | [optional] 
+**additional_groups_ids** | **int[]** |  | [optional] 
 **bank_account** | **string** |  | [optional] 
 **bank_account_owner** | **string** |  | [optional] 
 **bank_bic** | **string** |  | [optional] 
@@ -65,6 +66,8 @@ Name | Type | Description | Notes
 **suffix_1** | **string** |  | [optional] 
 **suffix_2** | **string** |  | [optional] 
 **tax_number** | **string** |  | [optional] 
+**court** | **string** |  | [optional] 
+**court_registry_number** | **string** |  | [optional] 
 **tax_options** | **string** | nStb &#x3D; Nicht steuerbar (Drittland), nStbUstID &#x3D; Nicht steuerbar (EU mit USt-IdNr.), nStbNoneUstID &#x3D; Nicht steuerbar (EU ohne USt-IdNr.), revc &#x3D; Steuerschuldwechsel §13b (Inland), IG &#x3D; Innergemeinschaftliche Lieferung, AL &#x3D; Ausfuhrlieferung, sStfr &#x3D; sonstige Steuerbefreiung, NULL &#x3D; Umsatzsteuerpflichtig | [optional] 
 **title** | **string** |  | [optional] 
 **vat_identifier** | **string** |  | [optional] 

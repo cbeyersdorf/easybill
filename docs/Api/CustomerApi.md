@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **customersGet**
-> \cbeyersdorf\easybill\Model\Customers customersGet($limit, $page, $group_id, $number, $country, $zip_code, $emails, $first_name, $last_name, $company_name, $created_at)
+> \cbeyersdorf\easybill\Model\Customers customersGet($limit, $page, $group_id, $additional_group_id, $number, $country, $zip_code, $emails, $first_name, $last_name, $company_name, $created_at)
 
 Fetch customers list
 
@@ -40,6 +40,7 @@ $apiInstance = new cbeyersdorf\easybill\Api\CustomerApi(
 $limit = 56; // int | Limited the result. Default is 100. Maximum can be 1000.
 $page = 56; // int | Set current Page. Default is 1.
 $group_id = "group_id_example"; // string | Filter customers by group_id. You can add multiple group ids separate by comma like id,id,id.
+$additional_group_id = "additional_group_id_example"; // string | Filter customers by additional_group_id. You can add multiple group ids separate by comma like id,id,id.
 $number = "number_example"; // string | Filter customers by number. You can add multiple numbers separate by comma like no,no,no.
 $country = "country_example"; // string | Filter customers by country. You can add multiple countries separate by comma like DE,PL,FR.
 $zip_code = "zip_code_example"; // string | Filter customers by zip_code. You can add multiple zip codes separate by comma like zip,zip,zip.
@@ -50,7 +51,7 @@ $company_name = "company_name_example"; // string | Filter customers by first_na
 $created_at = "created_at_example"; // string | Filter customers by created_at. You can filter one date with created_at=2014-12-10 or between like 2015-01-01,2015-12-31.
 
 try {
-    $result = $apiInstance->customersGet($limit, $page, $group_id, $number, $country, $zip_code, $emails, $first_name, $last_name, $company_name, $created_at);
+    $result = $apiInstance->customersGet($limit, $page, $group_id, $additional_group_id, $number, $country, $zip_code, $emails, $first_name, $last_name, $company_name, $created_at);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->customersGet: ', $e->getMessage(), PHP_EOL;
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| Limited the result. Default is 100. Maximum can be 1000. | [optional]
  **page** | **int**| Set current Page. Default is 1. | [optional]
  **group_id** | **string**| Filter customers by group_id. You can add multiple group ids separate by comma like id,id,id. | [optional]
+ **additional_group_id** | **string**| Filter customers by additional_group_id. You can add multiple group ids separate by comma like id,id,id. | [optional]
  **number** | **string**| Filter customers by number. You can add multiple numbers separate by comma like no,no,no. | [optional]
  **country** | **string**| Filter customers by country. You can add multiple countries separate by comma like DE,PL,FR. | [optional]
  **zip_code** | **string**| Filter customers by zip_code. You can add multiple zip codes separate by comma like zip,zip,zip. | [optional]

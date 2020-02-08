@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **last_postbox_id** | **int** |  | [optional] 
 **login_id** | **int** | If omitted or null, the currently active login is used. | [optional] 
 **number** | **string** |  | [optional] [default to 'null']
+**order_number** | **string** |  | [optional] [default to '']
 **paid_amount** | **int** |  | [optional] 
 **paid_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **pdf_pages** | **int** |  | [optional] 
