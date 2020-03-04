@@ -1,4 +1,5 @@
 #!/bin/bash
+#sudo docker run --rm -v ${PWD}/../:/local openapitools/openapi-generator-cli generate \
 sudo docker run --rm -v ${PWD}/../:/local swaggerapi/swagger-codegen-cli generate \
 	-i https://api.easybill.de/rest/v1/swagger.json \
 	-l php \
