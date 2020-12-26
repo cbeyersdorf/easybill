@@ -17,11 +17,14 @@ Name | Type | Description | Notes
 **cash_discount** | **float** |  | [optional] 
 **cash_discount_type** | **string** |  | [optional] 
 **city** | **string** |  | [optional] 
+**state** | **string** |  | [optional] 
 **company_name** | **string** |  | 
 **country** | **string** |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **updated_at** | **string** |  | [optional] 
+**delivery_title** | **string** |  | [optional] 
 **delivery_city** | **string** |  | [optional] 
+**delivery_state** | **string** |  | [optional] 
 **delivery_company_name** | **string** |  | [optional] 
 **delivery_country** | **string** |  | [optional] 
 **delivery_first_name** | **string** |  | [optional] 
@@ -54,6 +57,7 @@ Name | Type | Description | Notes
 **phone_2** | **string** |  | [optional] 
 **postbox** | **string** |  | [optional] 
 **postbox_city** | **string** |  | [optional] 
+**postbox_state** | **string** |  | [optional] 
 **postbox_country** | **string** |  | [optional] 
 **postbox_zip_code** | **string** |  | [optional] 
 **sale_price_level** | **string** |  | [optional] 
@@ -72,6 +76,7 @@ Name | Type | Description | Notes
 **title** | **string** |  | [optional] 
 **vat_identifier** | **string** |  | [optional] 
 **zip_code** | **string** |  | [optional] 
+**document_pdf_type** | **string** | Type of PDF to use when sending a Document to the Customer. | [optional] [default to 'default']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

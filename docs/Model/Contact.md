@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **city** | **string** |  | 
+**state** | **string** |  | [optional] 
 **company_name** | **string** |  | [optional] 
 **country** | **string** | Two-letter country code | [optional] 
 **department** | **string** |  | [optional] [default to 'null']

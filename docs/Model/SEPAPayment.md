@@ -11,6 +11,9 @@ Name | Type | Description | Notes
 **debitor_bic** | **string** | If type is CREDIT, this field is overwritten with the selected bank account data on export. | [optional] [default to 'null']
 **debitor_iban** | **string** | Mandatory if type is DEBIT. If type is CREDIT, this field is overwritten with the selected bank account data on export. | 
 **debitor_name** | **string** | Mandatory if type is DEBIT. If type is CREDIT, this field is overwritten with the selected bank account data on export. | 
+**debitor_address_line_1** | **string** | Mandatory if type is DEBIT and the debitor&#39;s IBAN belongs to a country outside the EEA | [optional] 
+**debitor_address_line2** | **string** | string | [optional] 
+**debitor_country** | **string** | Mandatory if type is DEBIT and the debitor&#39;s IBAN belongs to a country outside the EEA | [optional] 
 **document_id** | **int** |  | 
 **export_at** | [**\DateTime**](\DateTime.md) | If a date is set, this record is marked as exported | [optional] 
 **export_error** | **string** |  | [optional] 

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **send_as** | **string** |  | [optional] [default to 'null']
 **is_sign** | **bool** |  | [optional] [default to false]
 **is_paid** | **bool** |  | [optional] [default to false]
+**paid_date_option** | **string** | Option is used to determine what date is used for the payment if is_paid is true. \&quot;next_valid_date\&quot; selects the next workday in regards to the created date of the document if the date falls on a saturday or sunday. | [optional] [default to 'created_date']
 **is_sepa** | **bool** |  | [optional] [default to false]
 **sepa_local_instrument** | **string** |  | [optional] [default to 'null']
 **sepa_sequence_type** | **string** |  | [optional] [default to 'null']

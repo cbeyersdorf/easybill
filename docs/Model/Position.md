@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **stock** | **string** | Activates stock management for this position | [optional] [default to 'NO']
 **stock_count** | **int** | Current stock count | [optional] 
 **stock_limit_notify** | **bool** | Notify when stock_count is lower than stock_limit | [optional] [default to false]
+**stock_limit_notify_frequency** | **string** | Notify frequency when stock_count is lower than stock_limit (ALWAYS, ONCE) | [optional] [default to 'ALWAYS']
 **stock_limit** | **int** |  | [optional] 
 **quantity** | **float** | Used as the default quantity when adding this position to a document | [optional] 
 

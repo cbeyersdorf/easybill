@@ -11,6 +11,9 @@ Name | Type | Description | Notes
 **email** | **string** |  | [optional] 
 **email_signature** | **string** |  | [optional] 
 **login_type** | **string** |  | [optional] [default to 'ASSISTANT']
+**locale** | **string** |  | [optional] 
+**time_zone** | **string** |  | [optional] 
+**security** | [**\cbeyersdorf\easybill\Model\LoginSecurity**](LoginSecurity.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
