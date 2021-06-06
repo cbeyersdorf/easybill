@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**documentsIdDelete**](DocumentApi.md#documentsIdDelete) | **DELETE** /documents/{id} | Delete document
 [**documentsIdDonePut**](DocumentApi.md#documentsIdDonePut) | **PUT** /documents/{id}/done | To complete a document.
 [**documentsIdGet**](DocumentApi.md#documentsIdGet) | **GET** /documents/{id} | Fetch document
+[**documentsIdJpgGet**](DocumentApi.md#documentsIdJpgGet) | **GET** /documents/{id}/jpg | Download a document as an jpeg-image
 [**documentsIdPdfGet**](DocumentApi.md#documentsIdPdfGet) | **GET** /documents/{id}/pdf | Fetch pdf document
 [**documentsIdPut**](DocumentApi.md#documentsIdPut) | **PUT** /documents/{id} | Update document
 [**documentsIdSendTypePost**](DocumentApi.md#documentsIdSendTypePost) | **POST** /documents/{id}/send/{type} | Send document
@@ -331,6 +332,68 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **documentsIdJpgGet**
+> string documentsIdJpgGet($id, $offset, $limit)
+
+Download a document as an jpeg-image
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// Configure HTTP basic authorization: basicAuth
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 789; // int | ID of document
+$offset = 789; // int | The page of the document where the image should start.
+$limit = 789; // int | The page of the document where the image should end.
+
+try {
+    $result = $apiInstance->documentsIdJpgGet($id, $offset, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DocumentApi->documentsIdJpgGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| ID of document |
+ **offset** | **int**| The page of the document where the image should start. | [optional]
+ **limit** | **int**| The page of the document where the image should end. | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: image/jpeg
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

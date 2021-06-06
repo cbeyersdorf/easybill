@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **is_replica** | **bool** | Marks a document as a replica from another software. | [optional] [default to false]
 **is_cold** | **bool** | Indicates if a document is in the long term archive | [optional] [default to false]
 **coldstorage_due_date** | [**\DateTime**](\DateTime.md) | Signals when the document should be moved to the long term archive | [optional] 
+**item_notes** | **string[]** | Field holds all unique document_note of items for the document | [optional] 
 **items** | [**\cbeyersdorf\easybill\Model\DocumentPosition[]**](DocumentPosition.md) |  | [optional] 
 **last_postbox_id** | **int** |  | [optional] 
 **login_id** | **int** | If omitted or null, the currently active login is used. | [optional] 

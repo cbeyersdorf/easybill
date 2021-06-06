@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **number** | **string** |  | [optional] [default to 'null']
 **description** | **string** |  | [optional] [default to 'null']
+**document_note** | **string** | This field can be used in the document text areas with the liquid placeholder {{document.item_notes}}. Every note is only displayed once for every kind of product. This is useful if you want to add something like an instruction. | [optional] 
 **quantity** | **float** |  | [optional] [default to 1.0]
 **quantity_str** | **string** | Use quantity_str if you want to set a quantity like: 1:30 h or 3x5 m. quantity_str overwrites quantity. | [optional] 
 **unit** | **string** |  | [optional] [default to 'null']

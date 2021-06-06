@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **sepa_sequence_type** | **string** |  | [optional] [default to 'null']
 **sepa_reference** | **string** |  | [optional] [default to 'null']
 **sepa_remittance_information** | **string** |  | [optional] [default to 'null']
+**target_type** | **string** | The document type that will be generated. Can not be changed on existing documents. | [optional] [default to 'INVOICE']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

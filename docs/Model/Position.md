@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] [default to 'PRODUCT']
 **number** | **string** |  | 
 **description** | **string** | The positions name or description | 
+**document_note** | **string** | This field can be used in the document text areas with the liquid placeholder {{document.item_notes}}. Every note is only displayed once for every kind of product. This is useful if you want to add something like an instruction. | [optional] 
 **note** | **string** | Note for internal use | [optional] [default to 'null']
 **unit** | **string** |  | [optional] [default to 'null']
 **export_identifier** | **string** | The FAS-Account is the four-digit revenue account, in which the revenue will be entered when doing the export to your tax consultant. In case you want to split your revenue to several revenue accounts, please talk to your tax consultant before, to guarantee an unobstructed use of the interface. For every revenue element, there are number ranges, which can be used. Please avoid using combinations of numbers, which can not be used by your tax consultant. | [optional] [default to 'null']
