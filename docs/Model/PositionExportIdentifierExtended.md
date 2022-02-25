@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**null** | **object** | Umsatzsteuerpflichtig | [optional] 
-**n_stb** | **object** | Nicht steuerbar (Drittland) | [optional] 
-**n_stb_ust_id** | **object** | Nicht steuerbar (EU mit USt-IdNr.) | [optional] 
-**n_stb_none_ust_id** | **object** | Nicht steuerbar (EU ohne USt-IdNr.) | [optional] 
-**n_stb_im** | **object** | Nicht steuerbarer Innenumsatz | [optional] 
-**revc** | **object** | Steuerschuldwechsel §13b (Inland) | [optional] 
-**ig** | **object** | Innergemeinschaftliche Lieferung | [optional] 
-**al** | **object** | Ausfuhrlieferung | [optional] 
-**s_stfr** | **object** | sonstige Steuerbefreiung | [optional] 
-**small_business** | **object** | Kleinunternehmen (Keine MwSt.) | [optional] 
+**null** | **string** | Umsatzsteuerpflichtig | [optional] [default to 'null']
+**n_stb** | **string** | Nicht steuerbar (Drittland) | [optional] [default to 'null']
+**n_stb_ust_id** | **string** | Nicht steuerbar (EU mit USt-IdNr.) | [optional] [default to 'null']
+**n_stb_none_ust_id** | **string** | Nicht steuerbar (EU ohne USt-IdNr.) | [optional] [default to 'null']
+**n_stb_im** | **string** | Nicht steuerbarer Innenumsatz | [optional] [default to 'null']
+**revc** | **string** | Steuerschuldwechsel §13b (Inland) | [optional] [default to 'null']
+**ig** | **string** | Innergemeinschaftliche Lieferung | [optional] [default to 'null']
+**al** | **string** | Ausfuhrlieferung | [optional] [default to 'null']
+**s_stfr** | **string** | sonstige Steuerbefreiung | [optional] [default to 'null']
+**small_business** | **string** | Kleinunternehmen (Keine MwSt.) | [optional] [default to 'null']
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

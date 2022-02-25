@@ -77,6 +77,8 @@ Name | Type | Description | Notes
 **vat_identifier** | **string** |  | [optional] 
 **zip_code** | **string** |  | [optional] 
 **document_pdf_type** | **string** | Type of PDF to use when sending a Document to the Customer. | [optional] [default to 'default']
+**buyer_reference** | **string** | Used as \&quot;buyerReference\&quot; in ZUGFeRD and as \&quot;Leitweg-ID\&quot; in the XRechnung format. | [optional] 
+**foreign_supplier_number** | **string** | The ID given to your company by the customer in his system. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

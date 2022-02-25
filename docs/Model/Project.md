@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **note** | **string** |  | [optional] [default to 'null']
 **status** | **string** |  | [optional] [default to 'OPEN']
 **due_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**budget_notify_frequency** | **string** |  | [optional] [default to 'ALWAYS']
 **consumed_time** | **int** |  | [optional] 
 **consumed_amount** | **int** |  | [optional] 
 

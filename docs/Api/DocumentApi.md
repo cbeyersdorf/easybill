@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **documentsGet**
-> \cbeyersdorf\easybill\Model\Documents documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status)
+> \cbeyersdorf\easybill\Model\Documents documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $ref_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status)
 
 Fetch documents list
 
@@ -49,6 +49,7 @@ $is_draft = "is_draft_example"; // string | Filter documents by draft flag.
 $is_archive = "is_archive_example"; // string | Filter documents by archive flag.
 $customer_id = "customer_id_example"; // string | Filter documents by customer_id. You can add multiple customer_is separate by comma like id,id,id.
 $project_id = "project_id_example"; // string | Filter documents by project_id. You can add multiple project_id separate by comma like id,id,id.
+$ref_id = "ref_id_example"; // string | Filter documents by ref_id.
 $document_date = "document_date_example"; // string | Filter documents by document_date. You can filter one date with document_date=2014-12-10 or between like 2015-01-01,2015-12-31.
 $paid_at = "paid_at_example"; // string | Filter documents by paid_at. You can filter one date with paid_at=2014-12-10 or between like 2015-01-01,2015-12-31. With paid_at=null you get all unpaid documents.
 $title = "title_example"; // string | Filter documents by title.
@@ -60,7 +61,7 @@ $shipping_country = "shipping_country_example"; // string | Filter documents by 
 $status = "status_example"; // string | Filter documents by status. Keep in mind that not every document type has a status.
 
 try {
-    $result = $apiInstance->documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status);
+    $result = $apiInstance->documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $ref_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DocumentApi->documentsGet: ', $e->getMessage(), PHP_EOL;
@@ -79,6 +80,7 @@ Name | Type | Description  | Notes
  **is_archive** | **string**| Filter documents by archive flag. | [optional]
  **customer_id** | **string**| Filter documents by customer_id. You can add multiple customer_is separate by comma like id,id,id. | [optional]
  **project_id** | **string**| Filter documents by project_id. You can add multiple project_id separate by comma like id,id,id. | [optional]
+ **ref_id** | **string**| Filter documents by ref_id. | [optional]
  **document_date** | **string**| Filter documents by document_date. You can filter one date with document_date&#x3D;2014-12-10 or between like 2015-01-01,2015-12-31. | [optional]
  **paid_at** | **string**| Filter documents by paid_at. You can filter one date with paid_at&#x3D;2014-12-10 or between like 2015-01-01,2015-12-31. With paid_at&#x3D;null you get all unpaid documents. | [optional]
  **title** | **string**| Filter documents by title. | [optional]
