@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **documentsIdCancelPost**
-> \cbeyersdorf\easybill\Model\Document documentsIdCancelPost($id)
+> \cbeyersdorf\easybill\Model\Document documentsIdCancelPost($id, $use_text_from_template)
 
 Cancel document
 
@@ -133,9 +133,10 @@ $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
     $config
 );
 $id = 789; // int | ID of document
+$use_text_from_template = false; // bool | Use standard texts from the template.
 
 try {
-    $result = $apiInstance->documentsIdCancelPost($id);
+    $result = $apiInstance->documentsIdCancelPost($id, $use_text_from_template);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DocumentApi->documentsIdCancelPost: ', $e->getMessage(), PHP_EOL;
@@ -148,6 +149,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| ID of document |
+ **use_text_from_template** | **bool**| Use standard texts from the template. | [optional] [default to false]
 
 ### Return type
 
