@@ -485,7 +485,7 @@ class Document implements ModelInterface, ArrayAccess
     const TYPE_ORDER = 'ORDER';
     const TYPE_PROFORMA_INVOICE = 'PROFORMA_INVOICE';
     const TYPE_STORNO_PROFORMA_INVOICE = 'STORNO_PROFORMA_INVOICE';
-    const VAT_OPTION_NULL = 'NULL';
+    const VAT_OPTION_NULL = NULL;
     const VAT_OPTION_N_STB = 'nStb';
     const VAT_OPTION_N_STB_UST_ID = 'nStbUstID';
     const VAT_OPTION_N_STB_NONE_UST_ID = 'nStbNoneUstID';

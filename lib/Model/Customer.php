@@ -547,7 +547,7 @@ class Customer implements ModelInterface, ArrayAccess
     const SEPA_AGREEMENT_BASIC = 'BASIC';
     const SEPA_AGREEMENT_COR1 = 'COR1';
     const SEPA_AGREEMENT_COMPANY = 'COMPANY';
-    const SEPA_AGREEMENT_NULL = 'NULL';
+    const SEPA_AGREEMENT_NULL = NULL;
     const TAX_OPTIONS_N_STB = 'nStb';
     const TAX_OPTIONS_N_STB_UST_ID = 'nStbUstID';
     const TAX_OPTIONS_N_STB_NONE_UST_ID = 'nStbNoneUstID';
@@ -556,7 +556,7 @@ class Customer implements ModelInterface, ArrayAccess
     const TAX_OPTIONS_IG = 'IG';
     const TAX_OPTIONS_AL = 'AL';
     const TAX_OPTIONS_S_STFR = 'sStfr';
-    const TAX_OPTIONS_NULL = 'NULL';
+    const TAX_OPTIONS_NULL = NULL;
     const DOCUMENT_PDF_TYPE__DEFAULT = 'default';
     const DOCUMENT_PDF_TYPE_ZUGFERD1 = 'zugferd1';
     const DOCUMENT_PDF_TYPE_ZUGFERD2_2 = 'zugferd2_2';
