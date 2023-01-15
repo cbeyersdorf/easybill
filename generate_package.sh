@@ -1,5 +1,5 @@
 #!/bin/bash
-# NEW PHP 7.4 build with openapitools/openapi-generator-cli (should not need the null fix)
+# NEW PHP 7.4 build with openapitools/openapi-generator-cli (needs the fix_null_problem.sh after generation)
 sudo docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate \
 	-i https://api.easybill.de/rest/v1/swagger.json \
 	-g php \
