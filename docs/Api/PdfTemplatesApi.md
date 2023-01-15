@@ -1,26 +1,32 @@
 # cbeyersdorf\easybill\PdfTemplatesApi
 
-All URIs are relative to *https://api.easybill.de/rest/v1*
+All URIs are relative to https://api.easybill.de/rest/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**pdfTemplatesGet**](PdfTemplatesApi.md#pdfTemplatesGet) | **GET** /pdf-templates | Fetch PDF Templates list
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**pdfTemplatesGet()**](PdfTemplatesApi.md#pdfTemplatesGet) | **GET** /pdf-templates | Fetch PDF Templates list |
 
 
-# **pdfTemplatesGet**
-> \cbeyersdorf\easybill\Model\PDFTemplates pdfTemplatesGet()
+## `pdfTemplatesGet()`
+
+```php
+pdfTemplatesGet($type): \cbeyersdorf\easybill\Model\PDFTemplates
+```
 
 Fetch PDF Templates list
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -33,18 +39,21 @@ $apiInstance = new cbeyersdorf\easybill\Api\PdfTemplatesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$type = array('type_example'); // string[] | Filters the templates by the specified type. You can specify several types comma-separated, like type,type,type.
 
 try {
-    $result = $apiInstance->pdfTemplatesGet();
+    $result = $apiInstance->pdfTemplatesGet($type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PdfTemplatesApi->pdfTemplatesGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **type** | [**string[]**](../Model/string.md)| Filters the templates by the specified type. You can specify several types comma-separated, like type,type,type. | [optional] |
 
 ### Return type
 
@@ -56,8 +65,9 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

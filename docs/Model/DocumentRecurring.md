@@ -1,12 +1,13 @@
-# DocumentRecurring
+# # DocumentRecurring
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**next_date** | [**\DateTime**](\DateTime.md) | Must be in the future | 
+**next_date** | **\DateTime** | Must be in the future |
 **frequency** | **string** |  | [optional] [default to 'MONTHLY']
 **frequency_special** | **string** |  | [optional] [default to 'null']
-**interval** | **int** |  | [optional] 
+**interval** | **int** |  | [optional]
 **end_date_or_count** | **string** | Date of last exectution day or number of times to exectute | [optional] [default to 'null']
 **status** | **string** |  | [optional] [default to 'WAITING']
 **as_draft** | **bool** |  | [optional] [default to false]
@@ -22,6 +23,4 @@ Name | Type | Description | Notes
 **sepa_remittance_information** | **string** |  | [optional] [default to 'null']
 **target_type** | **string** | The document type that will be generated. Can not be changed on existing documents. | [optional] [default to 'INVOICE']
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

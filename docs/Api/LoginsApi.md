@@ -1,27 +1,33 @@
 # cbeyersdorf\easybill\LoginsApi
 
-All URIs are relative to *https://api.easybill.de/rest/v1*
+All URIs are relative to https://api.easybill.de/rest/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**loginsGet**](LoginsApi.md#loginsGet) | **GET** /logins | 
-[**loginsIdGet**](LoginsApi.md#loginsIdGet) | **GET** /logins/{id} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**loginsGet()**](LoginsApi.md#loginsGet) | **GET** /logins |  |
+| [**loginsIdGet()**](LoginsApi.md#loginsIdGet) | **GET** /logins/{id} |  |
 
 
-# **loginsGet**
-> \cbeyersdorf\easybill\Model\Logins loginsGet($limit, $page)
+## `loginsGet()`
+
+```php
+loginsGet($limit, $page): \cbeyersdorf\easybill\Model\Logins
+```
 
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -43,15 +49,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LoginsApi->loginsGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **int**| Limited the result. Default is 100. Maximum can be 1000. | [optional]
- **page** | **int**| Set current Page. Default is 1. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| Limited the result. Default is 100. Maximum can be 1000. | [optional] |
+| **page** | **int**| Set current Page. Default is 1. | [optional] |
 
 ### Return type
 
@@ -63,25 +68,33 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **loginsIdGet**
-> \cbeyersdorf\easybill\Model\Login loginsIdGet($id)
+## `loginsIdGet()`
+
+```php
+loginsIdGet($id): \cbeyersdorf\easybill\Model\Login
+```
 
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -94,7 +107,7 @@ $apiInstance = new cbeyersdorf\easybill\Api\LoginsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 789; // int | ID of the login that needs to be fetched
+$id = 56; // int | ID of the login that needs to be fetched
 
 try {
     $result = $apiInstance->loginsIdGet($id);
@@ -102,14 +115,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LoginsApi->loginsIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| ID of the login that needs to be fetched |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| ID of the login that needs to be fetched | |
 
 ### Return type
 
@@ -121,8 +133,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

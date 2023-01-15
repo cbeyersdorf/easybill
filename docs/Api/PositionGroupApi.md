@@ -1,30 +1,36 @@
 # cbeyersdorf\easybill\PositionGroupApi
 
-All URIs are relative to *https://api.easybill.de/rest/v1*
+All URIs are relative to https://api.easybill.de/rest/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**positionGroupsGet**](PositionGroupApi.md#positionGroupsGet) | **GET** /position-groups | Fetch position group list
-[**positionGroupsIdDelete**](PositionGroupApi.md#positionGroupsIdDelete) | **DELETE** /position-groups/{id} | Delete position group
-[**positionGroupsIdGet**](PositionGroupApi.md#positionGroupsIdGet) | **GET** /position-groups/{id} | Fetch position group
-[**positionGroupsIdPut**](PositionGroupApi.md#positionGroupsIdPut) | **PUT** /position-groups/{id} | Update position group
-[**positionGroupsPost**](PositionGroupApi.md#positionGroupsPost) | **POST** /position-groups | Create position group
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**positionGroupsGet()**](PositionGroupApi.md#positionGroupsGet) | **GET** /position-groups | Fetch position group list |
+| [**positionGroupsIdDelete()**](PositionGroupApi.md#positionGroupsIdDelete) | **DELETE** /position-groups/{id} | Delete position group |
+| [**positionGroupsIdGet()**](PositionGroupApi.md#positionGroupsIdGet) | **GET** /position-groups/{id} | Fetch position group |
+| [**positionGroupsIdPut()**](PositionGroupApi.md#positionGroupsIdPut) | **PUT** /position-groups/{id} | Update position group |
+| [**positionGroupsPost()**](PositionGroupApi.md#positionGroupsPost) | **POST** /position-groups | Create position group |
 
 
-# **positionGroupsGet**
-> \cbeyersdorf\easybill\Model\PositionGroups positionGroupsGet($limit, $page)
+## `positionGroupsGet()`
+
+```php
+positionGroupsGet($limit, $page): \cbeyersdorf\easybill\Model\PositionGroups
+```
 
 Fetch position group list
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -46,15 +52,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PositionGroupApi->positionGroupsGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **int**| Limited the result. Default is 100. Maximum can be 1000. | [optional]
- **page** | **int**| Set current Page. Default is 1. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| Limited the result. Default is 100. Maximum can be 1000. | [optional] |
+| **page** | **int**| Set current Page. Default is 1. | [optional] |
 
 ### Return type
 
@@ -66,25 +71,33 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **positionGroupsIdDelete**
-> positionGroupsIdDelete($id)
+## `positionGroupsIdDelete()`
+
+```php
+positionGroupsIdDelete($id)
+```
 
 Delete position group
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -97,21 +110,20 @@ $apiInstance = new cbeyersdorf\easybill\Api\PositionGroupApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 789; // int | ID of position group
+$id = 56; // int | ID of position group
 
 try {
     $apiInstance->positionGroupsIdDelete($id);
 } catch (Exception $e) {
     echo 'Exception when calling PositionGroupApi->positionGroupsIdDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| ID of position group |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| ID of position group | |
 
 ### Return type
 
@@ -123,25 +135,33 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **positionGroupsIdGet**
-> \cbeyersdorf\easybill\Model\PositionGroup positionGroupsIdGet($id)
+## `positionGroupsIdGet()`
+
+```php
+positionGroupsIdGet($id): \cbeyersdorf\easybill\Model\PositionGroup
+```
 
 Fetch position group
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -154,7 +174,7 @@ $apiInstance = new cbeyersdorf\easybill\Api\PositionGroupApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 789; // int | ID of position group
+$id = 56; // int | ID of position group
 
 try {
     $result = $apiInstance->positionGroupsIdGet($id);
@@ -162,14 +182,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PositionGroupApi->positionGroupsIdGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| ID of position group |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| ID of position group | |
 
 ### Return type
 
@@ -181,25 +200,33 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **positionGroupsIdPut**
-> \cbeyersdorf\easybill\Model\PositionGroup positionGroupsIdPut($id, $body)
+## `positionGroupsIdPut()`
+
+```php
+positionGroupsIdPut($id, $body): \cbeyersdorf\easybill\Model\PositionGroup
+```
 
 Update position group
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -212,8 +239,8 @@ $apiInstance = new cbeyersdorf\easybill\Api\PositionGroupApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 789; // int | ID of position goup
-$body = new \cbeyersdorf\easybill\Model\PositionGroup(); // \cbeyersdorf\easybill\Model\PositionGroup | 
+$id = 56; // int | ID of position goup
+$body = new \cbeyersdorf\easybill\Model\PositionGroup(); // \cbeyersdorf\easybill\Model\PositionGroup
 
 try {
     $result = $apiInstance->positionGroupsIdPut($id, $body);
@@ -221,15 +248,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PositionGroupApi->positionGroupsIdPut: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| ID of position goup |
- **body** | [**\cbeyersdorf\easybill\Model\PositionGroup**](../Model/PositionGroup.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| ID of position goup | |
+| **body** | [**\cbeyersdorf\easybill\Model\PositionGroup**](../Model/PositionGroup.md)|  | |
 
 ### Return type
 
@@ -241,25 +267,33 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **positionGroupsPost**
-> \cbeyersdorf\easybill\Model\PositionGroup positionGroupsPost($body)
+## `positionGroupsPost()`
+
+```php
+positionGroupsPost($body): \cbeyersdorf\easybill\Model\PositionGroup
+```
 
 Create position group
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 // Configure API key authorization: Bearer
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -272,7 +306,7 @@ $apiInstance = new cbeyersdorf\easybill\Api\PositionGroupApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \cbeyersdorf\easybill\Model\PositionGroup(); // \cbeyersdorf\easybill\Model\PositionGroup | 
+$body = new \cbeyersdorf\easybill\Model\PositionGroup(); // \cbeyersdorf\easybill\Model\PositionGroup
 
 try {
     $result = $apiInstance->positionGroupsPost($body);
@@ -280,14 +314,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PositionGroupApi->positionGroupsPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\cbeyersdorf\easybill\Model\PositionGroup**](../Model/PositionGroup.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**\cbeyersdorf\easybill\Model\PositionGroup**](../Model/PositionGroup.md)|  | |
 
 ### Return type
 
@@ -299,8 +332,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

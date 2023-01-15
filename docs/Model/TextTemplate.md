@@ -1,13 +1,12 @@
-# TextTemplate
+# # TextTemplate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**can_modify** | **bool** |  | [optional] 
-**id** | **int** |  | [optional] 
-**text** | **string** |  | 
-**title** | **string** |  | 
+**can_modify** | **bool** | Deprecated, field is always true. | [optional] [readonly]
+**id** | **int** |  | [optional] [readonly]
+**text** | **string** |  |
+**title** | **string** |  |
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

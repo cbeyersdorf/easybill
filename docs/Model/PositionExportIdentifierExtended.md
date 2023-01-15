@@ -1,6 +1,7 @@
-# PositionExportIdentifierExtended
+# # PositionExportIdentifierExtended
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **null** | **string** | Umsatzsteuerpflichtig | [optional] [default to 'null']
@@ -14,6 +15,4 @@ Name | Type | Description | Notes
 **s_stfr** | **string** | sonstige Steuerbefreiung | [optional] [default to 'null']
 **small_business** | **string** | Kleinunternehmen (Keine MwSt.) | [optional] [default to 'null']
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,6 +1,7 @@
-# PDFTemplate
+# # PDFTemplate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] [default to 'INVOICE-DE']
@@ -8,6 +9,4 @@ Name | Type | Description | Notes
 **pdf_template** | **string** |  | [optional] [default to 'DE']
 **document_type** | **string** |  | [optional] [default to 'INVOICE']
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
