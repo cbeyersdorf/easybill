@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **grace_period** | **int** | will be replaced by its alias due_in_days. | [optional]
 **due_in_days** | **int** | due date in days. | [optional]
 **id** | **int** |  | [optional] [readonly]
+**is_acceptable_on_public_domain** | **bool** | Indicates if a document can be accepted by the end customer through the document&#39;s public access page. | [optional] [default to false]
 **is_archive** | **bool** |  | [optional] [default to false]
 **is_draft** | **bool** | This property is read only. To finish the document call /documents/{id}/done. | [optional] [readonly]
 **is_replica** | **bool** | Marks a document as a replica from another software. | [optional] [default to false]

@@ -13,6 +13,7 @@ All URIs are relative to https://api.easybill.de/rest/v1, except if the operatio
 | [**documentsIdPdfGet()**](DocumentApi.md#documentsIdPdfGet) | **GET** /documents/{id}/pdf | Fetch pdf document |
 | [**documentsIdPut()**](DocumentApi.md#documentsIdPut) | **PUT** /documents/{id} | Update document |
 | [**documentsIdSendTypePost()**](DocumentApi.md#documentsIdSendTypePost) | **POST** /documents/{id}/send/{type} | Send document |
+| [**documentsIdTypePost()**](DocumentApi.md#documentsIdTypePost) | **POST** /documents/{id}/{type} | Convert an existing document to one of a different type |
 | [**documentsPost()**](DocumentApi.md#documentsPost) | **POST** /documents | Create document |
 
 
@@ -31,15 +32,15 @@ Fetch documents list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -102,7 +103,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -128,15 +129,15 @@ Cancel document
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -169,7 +170,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -195,15 +196,15 @@ Delete document
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -233,7 +234,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -259,15 +260,15 @@ To complete a document.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -298,7 +299,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -324,15 +325,15 @@ Fetch document
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -363,7 +364,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -389,15 +390,15 @@ Download a document as an jpeg-image
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -432,7 +433,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -458,15 +459,15 @@ Fetch pdf document
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -497,7 +498,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -523,15 +524,15 @@ Update document
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -566,7 +567,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -592,15 +593,15 @@ Send document
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -634,12 +635,81 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
 - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `documentsIdTypePost()`
+
+```php
+documentsIdTypePost($id, $type, $pdf_template): \cbeyersdorf\easybill\Model\Document
+```
+
+Convert an existing document to one of a different type
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+
+$apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 56; // int | ID of document
+$type = 'type_example'; // string | The target document type
+$pdf_template = 'DE'; // string | The ID of the printer template to use. Defaults to 'DE' if not given.
+
+try {
+    $result = $apiInstance->documentsIdTypePost($id, $type, $pdf_template);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DocumentApi->documentsIdTypePost: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| ID of document | |
+| **type** | **string**| The target document type | |
+| **pdf_template** | **string**| The ID of the printer template to use. Defaults to &#39;DE&#39; if not given. | [optional] [default to &#39;DE&#39;] |
+
+### Return type
+
+[**\cbeyersdorf\easybill\Model\Document**](../Model/Document.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -660,15 +730,15 @@ Create document
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
@@ -699,7 +769,7 @@ try {
 
 ### Authorization
 
-[Bearer](../../README.md#Bearer), [basicAuth](../../README.md#basicAuth)
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
 
 ### HTTP request headers
 

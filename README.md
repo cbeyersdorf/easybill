@@ -97,15 +97,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-// Configure API key authorization: Bearer
-$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure HTTP basic authorization: basicAuth
 $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
 $apiInstance = new cbeyersdorf\easybill\Api\AttachmentApi(
@@ -172,6 +172,7 @@ Class | Method | HTTP request | Description
 *DocumentApi* | [**documentsIdPdfGet**](docs/Api/DocumentApi.md#documentsidpdfget) | **GET** /documents/{id}/pdf | Fetch pdf document
 *DocumentApi* | [**documentsIdPut**](docs/Api/DocumentApi.md#documentsidput) | **PUT** /documents/{id} | Update document
 *DocumentApi* | [**documentsIdSendTypePost**](docs/Api/DocumentApi.md#documentsidsendtypepost) | **POST** /documents/{id}/send/{type} | Send document
+*DocumentApi* | [**documentsIdTypePost**](docs/Api/DocumentApi.md#documentsidtypepost) | **POST** /documents/{id}/{type} | Convert an existing document to one of a different type
 *DocumentApi* | [**documentsPost**](docs/Api/DocumentApi.md#documentspost) | **POST** /documents | Create document
 *DocumentPaymentApi* | [**documentPaymentsGet**](docs/Api/DocumentPaymentApi.md#documentpaymentsget) | **GET** /document-payments | Fetch document payments list
 *DocumentPaymentApi* | [**documentPaymentsIdDelete**](docs/Api/DocumentPaymentApi.md#documentpaymentsiddelete) | **DELETE** /document-payments/{id} | Delete document payment
@@ -235,87 +236,68 @@ Class | Method | HTTP request | Description
 
 - [Attachment](docs/Model/Attachment.md)
 - [Attachments](docs/Model/Attachments.md)
-- [AttachmentsAllOf](docs/Model/AttachmentsAllOf.md)
 - [Contact](docs/Model/Contact.md)
 - [Contacts](docs/Model/Contacts.md)
-- [ContactsAllOf](docs/Model/ContactsAllOf.md)
 - [Customer](docs/Model/Customer.md)
 - [CustomerGroup](docs/Model/CustomerGroup.md)
 - [CustomerGroups](docs/Model/CustomerGroups.md)
-- [CustomerGroupsAllOf](docs/Model/CustomerGroupsAllOf.md)
 - [CustomerSnapshot](docs/Model/CustomerSnapshot.md)
 - [Customers](docs/Model/Customers.md)
-- [CustomersAllOf](docs/Model/CustomersAllOf.md)
 - [Discount](docs/Model/Discount.md)
 - [DiscountPosition](docs/Model/DiscountPosition.md)
 - [DiscountPositionGroup](docs/Model/DiscountPositionGroup.md)
 - [DiscountPositionGroups](docs/Model/DiscountPositionGroups.md)
-- [DiscountPositionGroupsAllOf](docs/Model/DiscountPositionGroupsAllOf.md)
 - [DiscountPositions](docs/Model/DiscountPositions.md)
-- [DiscountPositionsAllOf](docs/Model/DiscountPositionsAllOf.md)
 - [Document](docs/Model/Document.md)
 - [DocumentAddress](docs/Model/DocumentAddress.md)
 - [DocumentPayment](docs/Model/DocumentPayment.md)
 - [DocumentPayments](docs/Model/DocumentPayments.md)
-- [DocumentPaymentsAllOf](docs/Model/DocumentPaymentsAllOf.md)
 - [DocumentPosition](docs/Model/DocumentPosition.md)
 - [DocumentRecurring](docs/Model/DocumentRecurring.md)
 - [Documents](docs/Model/Documents.md)
-- [DocumentsAllOf](docs/Model/DocumentsAllOf.md)
 - [Login](docs/Model/Login.md)
 - [LoginSecurity](docs/Model/LoginSecurity.md)
 - [Logins](docs/Model/Logins.md)
-- [LoginsAllOf](docs/Model/LoginsAllOf.md)
 - [ModelList](docs/Model/ModelList.md)
 - [PDFTemplate](docs/Model/PDFTemplate.md)
+- [PDFTemplateSettings](docs/Model/PDFTemplateSettings.md)
+- [PDFTemplateSettingsEmail](docs/Model/PDFTemplateSettingsEmail.md)
 - [PDFTemplates](docs/Model/PDFTemplates.md)
-- [PDFTemplatesAllOf](docs/Model/PDFTemplatesAllOf.md)
 - [Position](docs/Model/Position.md)
 - [PositionExportIdentifierExtended](docs/Model/PositionExportIdentifierExtended.md)
 - [PositionGroup](docs/Model/PositionGroup.md)
 - [PositionGroups](docs/Model/PositionGroups.md)
-- [PositionGroupsAllOf](docs/Model/PositionGroupsAllOf.md)
 - [Positions](docs/Model/Positions.md)
-- [PositionsAllOf](docs/Model/PositionsAllOf.md)
 - [PostBox](docs/Model/PostBox.md)
 - [PostBoxRequest](docs/Model/PostBoxRequest.md)
 - [PostBoxes](docs/Model/PostBoxes.md)
-- [PostBoxesAllOf](docs/Model/PostBoxesAllOf.md)
 - [Project](docs/Model/Project.md)
 - [Projects](docs/Model/Projects.md)
-- [ProjectsAllOf](docs/Model/ProjectsAllOf.md)
 - [SEPAPayment](docs/Model/SEPAPayment.md)
 - [SEPAPayments](docs/Model/SEPAPayments.md)
-- [SEPAPaymentsAllOf](docs/Model/SEPAPaymentsAllOf.md)
 - [SerialNumber](docs/Model/SerialNumber.md)
 - [SerialNumbers](docs/Model/SerialNumbers.md)
-- [SerialNumbersAllOf](docs/Model/SerialNumbersAllOf.md)
 - [ServiceDate](docs/Model/ServiceDate.md)
 - [Stock](docs/Model/Stock.md)
 - [Stocks](docs/Model/Stocks.md)
-- [StocksAllOf](docs/Model/StocksAllOf.md)
 - [Task](docs/Model/Task.md)
 - [Tasks](docs/Model/Tasks.md)
-- [TasksAllOf](docs/Model/TasksAllOf.md)
 - [TextTemplate](docs/Model/TextTemplate.md)
 - [TextTemplates](docs/Model/TextTemplates.md)
-- [TextTemplatesAllOf](docs/Model/TextTemplatesAllOf.md)
 - [TimeTracking](docs/Model/TimeTracking.md)
 - [TimeTrackings](docs/Model/TimeTrackings.md)
-- [TimeTrackingsAllOf](docs/Model/TimeTrackingsAllOf.md)
 - [WebHook](docs/Model/WebHook.md)
 - [WebHookLastResponse](docs/Model/WebHookLastResponse.md)
 - [WebHooks](docs/Model/WebHooks.md)
-- [WebHooksAllOf](docs/Model/WebHooksAllOf.md)
 
 ## Authorization
 
+Authentication schemes defined for the API:
 ### Bearer
 
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
-
 
 
 ### basicAuth
@@ -339,5 +321,5 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `1.78.0`
+- API version: `1.82.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

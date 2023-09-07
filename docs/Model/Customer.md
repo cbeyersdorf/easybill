@@ -63,7 +63,7 @@ Name | Type | Description | Notes
 **postbox_zip_code** | **string** |  | [optional]
 **sale_price_level** | **string** |  | [optional]
 **salutation** | **int** | 0 &#x3D; nothing, 1 &#x3D; Mr, 2 &#x3D; Mrs, 3 &#x3D; Company, 4 &#x3D; Mr &amp; Mrs, 5 &#x3D; Married couple, 6 &#x3D; Family | [optional]
-**sepa_agreement** | **string** | BASIC &#x3D; SEPA-Basislastschrift, COR1 &#x3D; SEPA-Basislastschrift COR1, COMPANY &#x3D; SEPA-Firmenlastschrift, NULL &#x3D; Noch kein Mandat erteilt | [optional]
+**sepa_agreement** | **string** | BASIC &#x3D; SEPA-Basislastschrift, COR1 &#x3D; SEPA-Basislastschrift COR1 (deprecated use BASIC instead), COMPANY &#x3D; SEPA-Firmenlastschrift, NULL &#x3D; Noch kein Mandat erteilt | [optional]
 **sepa_agreement_date** | **\DateTime** |  | [optional]
 **sepa_mandate_reference** | **string** |  | [optional]
 **since_date** | **\DateTime** |  | [optional]

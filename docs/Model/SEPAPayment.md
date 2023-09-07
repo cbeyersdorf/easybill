@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **export_at** | **\DateTime** | If a date is set, this record is marked as exported | [optional]
 **export_error** | **string** |  | [optional] [readonly]
 **id** | **int** |  | [optional] [readonly]
-**local_instrument** | **string** | CORE: SEPA Core Direct Debit&lt;br/&gt; COR1: SEPA-Basislastschrift COR1&lt;br/&gt; B2B: SEPA Business to Business Direct Debit |
+**local_instrument** | **string** | CORE: SEPA Core Direct Debit&lt;br/&gt; COR1: SEPA-Basislastschrift COR1 (deprecated use CORE instead)&lt;br/&gt; B2B: SEPA Business to Business Direct Debit |
 **mandate_date_of_signature** | **\DateTime** |  |
 **mandate_id** | **string** |  |
 **reference** | **string** |  |
