@@ -68,5 +68,6 @@ Name | Type | Description | Notes
 **vat_id** | **string** |  | [optional] [readonly] [default to '']
 **fulfillment_country** | **string** |  | [optional] [default to 'null']
 **vat_option** | **string** | NULL: Normal steuerbar&lt;br/&gt; nStb: Nicht steuerbar (Drittland)&lt;br/&gt; nStbUstID: Nicht steuerbar (EU mit USt-IdNr.)&lt;br/&gt; nStbNoneUstID: Nicht steuerbar (EU ohne USt-IdNr.)&lt;br/&gt; nStbIm: Nicht steuerbarer Innenumsatz&lt;br/&gt; revc: Steuerschuldwechsel §13b (Inland)&lt;br/&gt; IG: Innergemeinschaftliche Lieferung&lt;br/&gt; AL: Ausfuhrlieferung&lt;br/&gt; sStfr: sonstige Steuerbefreiung&lt;br/&gt; smallBusiness: Kleinunternehmen (Keine MwSt.) | [optional] [default to 'null']
+**file_format_config** | [**\cbeyersdorf\easybill\Model\FileFormatConfig[]**](FileFormatConfig.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
