@@ -248,7 +248,7 @@ void (empty response body)
 ## `documentsIdDonePut()`
 
 ```php
-documentsIdDonePut($id): \cbeyersdorf\easybill\Model\Document
+documentsIdDonePut($id, $reason_for_change): \cbeyersdorf\easybill\Model\Document
 ```
 
 To complete a document.
@@ -278,9 +278,10 @@ $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
     $config
 );
 $id = 56; // int | ID of document
+$reason_for_change = 'reason_for_change_example'; // string | A string that is saved on the document version as reason.
 
 try {
-    $result = $apiInstance->documentsIdDonePut($id);
+    $result = $apiInstance->documentsIdDonePut($id, $reason_for_change);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DocumentApi->documentsIdDonePut: ', $e->getMessage(), PHP_EOL;
@@ -292,6 +293,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| ID of document | |
+| **reason_for_change** | **string**| A string that is saved on the document version as reason. | [optional] |
 
 ### Return type
 
@@ -512,7 +514,7 @@ try {
 ## `documentsIdPut()`
 
 ```php
-documentsIdPut($id, $body, $refresh_customer_data): \cbeyersdorf\easybill\Model\Document
+documentsIdPut($id, $body, $refresh_customer_data, $reason_for_change): \cbeyersdorf\easybill\Model\Document
 ```
 
 Update document
@@ -544,9 +546,10 @@ $apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
 $id = 56; // int | ID of document
 $body = new \cbeyersdorf\easybill\Model\Document(); // \cbeyersdorf\easybill\Model\Document
 $refresh_customer_data = True; // bool | Forces refreshing of the customer data.
+$reason_for_change = 'reason_for_change_example'; // string | A string that is saved on the document version as reason. This value takes only affect if you update an already finalized document and provide this value.
 
 try {
-    $result = $apiInstance->documentsIdPut($id, $body, $refresh_customer_data);
+    $result = $apiInstance->documentsIdPut($id, $body, $refresh_customer_data, $reason_for_change);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DocumentApi->documentsIdPut: ', $e->getMessage(), PHP_EOL;
@@ -560,6 +563,7 @@ try {
 | **id** | **int**| ID of document | |
 | **body** | [**\cbeyersdorf\easybill\Model\Document**](../Model/Document.md)|  | |
 | **refresh_customer_data** | **bool**| Forces refreshing of the customer data. | [optional] |
+| **reason_for_change** | **string**| A string that is saved on the document version as reason. This value takes only affect if you update an already finalized document and provide this value. | [optional] |
 
 ### Return type
 
