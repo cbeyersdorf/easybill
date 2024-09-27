@@ -14,8 +14,8 @@
     "license": "unlicense",
     "authors": [
         {
-            "name": "OpenAPI",
-            "homepage": "https://openapi-generator.tech"
+            "name": "IANT GmbH",
+            "homepage": "https://www.iant.de"
         }
     ],
     "require": {

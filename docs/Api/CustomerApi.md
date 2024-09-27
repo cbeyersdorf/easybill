@@ -230,7 +230,7 @@ try {
 ## `customersIdPut()`
 
 ```php
-customersIdPut($id, $body): \cbeyersdorf\easybill\Model\Customer
+customersIdPut($id, $body, $type): \cbeyersdorf\easybill\Model\Customer
 ```
 
 Update Customer
@@ -261,9 +261,10 @@ $apiInstance = new cbeyersdorf\easybill\Api\CustomerApi(
 );
 $id = 56; // int | ID of customer that needs to be updated
 $body = new \cbeyersdorf\easybill\Model\Customer(); // \cbeyersdorf\easybill\Model\Customer
+$type = 'CUSTOMER'; // string | Controls the type of the customer. If provided and the field \"number\" or \"supplier_number\" is empty or omitted, the type will force the generation of the relevant number if applicable. I. e. omitting \"supplier_number\" but providing the query parameter \"SUPPLIER\" will generate a \"supplier_number\".
 
 try {
-    $result = $apiInstance->customersIdPut($id, $body);
+    $result = $apiInstance->customersIdPut($id, $body, $type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->customersIdPut: ', $e->getMessage(), PHP_EOL;
@@ -276,6 +277,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| ID of customer that needs to be updated | |
 | **body** | [**\cbeyersdorf\easybill\Model\Customer**](../Model/Customer.md)|  | |
+| **type** | **string**| Controls the type of the customer. If provided and the field \&quot;number\&quot; or \&quot;supplier_number\&quot; is empty or omitted, the type will force the generation of the relevant number if applicable. I. e. omitting \&quot;supplier_number\&quot; but providing the query parameter \&quot;SUPPLIER\&quot; will generate a \&quot;supplier_number\&quot;. | [optional] [default to &#39;CUSTOMER&#39;] |
 
 ### Return type
 
@@ -297,7 +299,7 @@ try {
 ## `customersPost()`
 
 ```php
-customersPost($body): \cbeyersdorf\easybill\Model\Customer
+customersPost($body, $type): \cbeyersdorf\easybill\Model\Customer
 ```
 
 Create customer
@@ -327,9 +329,10 @@ $apiInstance = new cbeyersdorf\easybill\Api\CustomerApi(
     $config
 );
 $body = new \cbeyersdorf\easybill\Model\Customer(); // \cbeyersdorf\easybill\Model\Customer
+$type = 'CUSTOMER'; // string | Controls the type of the customer. If provided and the field \"number\" or \"supplier_number\" is empty or omitted, the type will force the generation of the relevant number if applicable. I. e. omitting \"supplier_number\" but providing the query parameter \"SUPPLIER\" will generate a \"supplier_number\".
 
 try {
-    $result = $apiInstance->customersPost($body);
+    $result = $apiInstance->customersPost($body, $type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerApi->customersPost: ', $e->getMessage(), PHP_EOL;
@@ -341,6 +344,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**\cbeyersdorf\easybill\Model\Customer**](../Model/Customer.md)|  | |
+| **type** | **string**| Controls the type of the customer. If provided and the field \&quot;number\&quot; or \&quot;supplier_number\&quot; is empty or omitted, the type will force the generation of the relevant number if applicable. I. e. omitting \&quot;supplier_number\&quot; but providing the query parameter \&quot;SUPPLIER\&quot; will generate a \&quot;supplier_number\&quot;. | [optional] [default to &#39;CUSTOMER&#39;] |
 
 ### Return type
 
