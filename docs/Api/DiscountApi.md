@@ -1,5 +1,7 @@
 # cbeyersdorf\easybill\DiscountApi
 
+Discounts for positions and position groups
+
 All URIs are relative to https://api.easybill.de/rest/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

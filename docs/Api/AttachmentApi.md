@@ -1,5 +1,7 @@
 # cbeyersdorf\easybill\AttachmentApi
 
+
+
 All URIs are relative to https://api.easybill.de/rest/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -372,7 +374,7 @@ $apiInstance = new cbeyersdorf\easybill\Api\AttachmentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file = "/path/to/file.txt"; // \SplFileObject
+$file = '/path/to/file.txt'; // \SplFileObject
 
 try {
     $result = $apiInstance->attachmentsPost($file);

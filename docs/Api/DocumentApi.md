@@ -1,5 +1,7 @@
 # cbeyersdorf\easybill\DocumentApi
 
+Invoices, offers, etc.
+
 All URIs are relative to https://api.easybill.de/rest/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -20,7 +22,7 @@ All URIs are relative to https://api.easybill.de/rest/v1, except if the operatio
 ## `documentsGet()`
 
 ```php
-documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $ref_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status): \cbeyersdorf\easybill\Model\Documents
+documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $ref_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status, $edited_at): \cbeyersdorf\easybill\Model\Documents
 ```
 
 Fetch documents list
@@ -66,9 +68,10 @@ $fulfillment_country = 'fulfillment_country_example'; // string | Filter documen
 $vat_country = 'vat_country_example'; // string | Filter documents by vat_country.
 $shipping_country = 'shipping_country_example'; // string | Filter documents by shipping_country.
 $status = 'status_example'; // string | Filter documents by status. Keep in mind that not every document type has a status.
+$edited_at = 'edited_at_example'; // string | Filter documents by edited_at. You can filter one date with edited_at=2014-12-10 or between like 2015-01-01,2015-12-31.
 
 try {
-    $result = $apiInstance->documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $ref_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status);
+    $result = $apiInstance->documentsGet($limit, $page, $type, $is_draft, $is_archive, $customer_id, $project_id, $ref_id, $document_date, $paid_at, $title, $number, $cancel_id, $fulfillment_country, $vat_country, $shipping_country, $status, $edited_at);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DocumentApi->documentsGet: ', $e->getMessage(), PHP_EOL;
@@ -96,6 +99,7 @@ try {
 | **vat_country** | **string**| Filter documents by vat_country. | [optional] |
 | **shipping_country** | **string**| Filter documents by shipping_country. | [optional] |
 | **status** | **string**| Filter documents by status. Keep in mind that not every document type has a status. | [optional] |
+| **edited_at** | **string**| Filter documents by edited_at. You can filter one date with edited_at&#x3D;2014-12-10 or between like 2015-01-01,2015-12-31. | [optional] |
 
 ### Return type
 
