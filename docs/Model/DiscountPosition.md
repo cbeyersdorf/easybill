@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**position_id** | **int** |  |
 **id** | **int** |  | [optional] [readonly]
 **customer_id** | **int** |  |
 **discount** | **int** | The discount value depending on \&quot;discount_type\&quot;. If not provided, inherits from customer when available | [optional]
 **discount_type** | **string** | AMOUNT subtracts the value in \&quot;discount\&quot; from the total&lt;br/&gt; QUANTITY subtracts the value in \&quot;discount\&quot; multiplied by quantity&lt;br/&gt; PERCENT uses the value in \&quot;discount\&quot; as a percentage&lt;br/&gt; FIX sets the value in \&quot;discount\&quot; as the new price. If not provided, inherits from customer when available | [optional] [default to 'PERCENT']
+**position_id** | **int** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

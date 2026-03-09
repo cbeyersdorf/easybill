@@ -10,6 +10,7 @@ All URIs are relative to https://api.easybill.de/rest/v1, except if the operatio
 | [**documentsIdCancelPost()**](DocumentApi.md#documentsIdCancelPost) | **POST** /documents/{id}/cancel | Cancel document |
 | [**documentsIdDelete()**](DocumentApi.md#documentsIdDelete) | **DELETE** /documents/{id} | Delete document |
 | [**documentsIdDonePut()**](DocumentApi.md#documentsIdDonePut) | **PUT** /documents/{id}/done | To complete a document. |
+| [**documentsIdDownloadGet()**](DocumentApi.md#documentsIdDownloadGet) | **GET** /documents/{id}/download | Fetch the document in best fitting format to the given Accept header |
 | [**documentsIdGet()**](DocumentApi.md#documentsIdGet) | **GET** /documents/{id} | Fetch document |
 | [**documentsIdJpgGet()**](DocumentApi.md#documentsIdJpgGet) | **GET** /documents/{id}/jpg | Download a document as an jpeg-image |
 | [**documentsIdPdfGet()**](DocumentApi.md#documentsIdPdfGet) | **GET** /documents/{id}/pdf | Fetch pdf document |
@@ -311,6 +312,73 @@ try {
 
 - **Content-Type**: Not defined
 - **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `documentsIdDownloadGet()`
+
+```php
+documentsIdDownloadGet($id, $accept): \SplFileObject
+```
+
+Fetch the document in best fitting format to the given Accept header
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+
+$apiInstance = new cbeyersdorf\easybill\Api\DocumentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 56; // int | ID of document
+$accept = 'accept_example'; // string | The preferred format of the requested binary. Preferred format and format version can be specified with custom parameters 'format' and 'version', see 'x-examples' below. Allowed mime types are currently 'application/pdf' with optional format 'zugferd' and 'application/xml' with the supported format 'xrechnung'. In both cases, **if** the 'format' parameter is specified, a 'version' parameter **can** be added, following SemVer, allowing \\* as wildcards. If no 'version' parameter is provided, the highest version fitting the format will be used. So 'application/pdf;format=zugferd;version=\\*' is equal to 'application/pdf;format=zugferd;', but 'application/pdf;format=zugferd;version=3\\.*' can explicitly require a version of at least 3.0 and higher.
+
+try {
+    $result = $apiInstance->documentsIdDownloadGet($id, $accept);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DocumentApi->documentsIdDownloadGet: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| ID of document | |
+| **accept** | **string**| The preferred format of the requested binary. Preferred format and format version can be specified with custom parameters &#39;format&#39; and &#39;version&#39;, see &#39;x-examples&#39; below. Allowed mime types are currently &#39;application/pdf&#39; with optional format &#39;zugferd&#39; and &#39;application/xml&#39; with the supported format &#39;xrechnung&#39;. In both cases, **if** the &#39;format&#39; parameter is specified, a &#39;version&#39; parameter **can** be added, following SemVer, allowing \\* as wildcards. If no &#39;version&#39; parameter is provided, the highest version fitting the format will be used. So &#39;application/pdf;format&#x3D;zugferd;version&#x3D;\\*&#39; is equal to &#39;application/pdf;format&#x3D;zugferd;&#39;, but &#39;application/pdf;format&#x3D;zugferd;version&#x3D;3\\.*&#39; can explicitly require a version of at least 3.0 and higher. | [optional] |
+
+### Return type
+
+**\SplFileObject**
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/pdf`, `application/pdf;format=zugferd;version=1.0.0`, `application/pdf;format=zugferd;version=2.2.0`, `application/xml;format=xrechnung;version=2.3.0`, `application/xml;format=xrechnung;version=3.0.1`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
