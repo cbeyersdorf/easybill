@@ -1,4 +1,4 @@
-# # PositionGroups
+# PositionGroups
 
 ## Properties
 

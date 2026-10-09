@@ -1,4 +1,4 @@
-# # TextTemplates
+# TextTemplates
 
 ## Properties
 

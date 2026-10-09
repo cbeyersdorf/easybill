@@ -1,4 +1,4 @@
-# # Positions
+# Positions
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # FileFormatConfig
+# FileFormatConfig
 
 ## Properties
 

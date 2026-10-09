@@ -1,4 +1,4 @@
-# # WebHookLastResponse
+# WebHookLastResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # Stock
+# Stock
 
 ## Properties
 

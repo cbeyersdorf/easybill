@@ -10,6 +10,7 @@ All URIs are relative to https://api.easybill.de/rest/v1, except if the operatio
 | [**customersIdDelete()**](CustomerApi.md#customersIdDelete) | **DELETE** /customers/{id} | Delete customer |
 | [**customersIdGet()**](CustomerApi.md#customersIdGet) | **GET** /customers/{id} | Fetch customer |
 | [**customersIdPut()**](CustomerApi.md#customersIdPut) | **PUT** /customers/{id} | Update Customer |
+| [**customersIdSepaMandateTransferPost()**](CustomerApi.md#customersIdSepaMandateTransferPost) | **POST** /customers/{id}/sepa-mandate/transfer | Transfer the customer&#39;s SEPA mandate to the connected payment provider |
 | [**customersPost()**](CustomerApi.md#customersPost) | **POST** /customers | Create customer |
 
 
@@ -237,6 +238,8 @@ customersIdPut($id, $body, $type): \cbeyersdorf\easybill\Model\Customer
 
 Update Customer
 
+If SEPA-relevant fields (`bank_account_owner`, `bank_iban`, `bank_bic`, `sepa_agreement`, `sepa_agreement_date`, `sepa_mandate_reference`) are changed and the customer has a SEPA direct debit mandate at the connected payment provider (e.g. Mollie), the SEPA change is applied immediately and the revocation of the existing mandate is scheduled in the background; `payment_provider_mandate_status` becomes `revoking` until it completes.
+
 ### Example
 
 ```php
@@ -292,6 +295,73 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `customersIdSepaMandateTransferPost()`
+
+```php
+customersIdSepaMandateTransferPost($id): \cbeyersdorf\easybill\Model\CustomersIdSepaMandateTransferPost200Response
+```
+
+Transfer the customer's SEPA mandate to the connected payment provider
+
+Transfers the customer's stored SEPA direct debit mandate data (`bank_account_owner`, `bank_iban`, `bank_bic`, `sepa_agreement`, `sepa_agreement_date`, `sepa_mandate_reference`) to the connected payment provider (e.g. Mollie), creating a provider customer and a SEPA direct debit mandate. Requires the account to have recurring payments connected and the customer to have no existing provider mandate. This only sets up the mandate at the provider - no collection or transfer is executed by this endpoint.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure API key authorization: Bearer
+$config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = cbeyersdorf\easybill\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+
+$apiInstance = new cbeyersdorf\easybill\Api\CustomerApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 56; // int | ID of the customer whose SEPA mandate is transferred
+
+try {
+    $result = $apiInstance->customersIdSepaMandateTransferPost($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CustomerApi->customersIdSepaMandateTransferPost: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**| ID of the customer whose SEPA mandate is transferred | |
+
+### Return type
+
+[**\cbeyersdorf\easybill\Model\CustomersIdSepaMandateTransferPost200Response**](../Model/CustomersIdSepaMandateTransferPost200Response.md)
+
+### Authorization
+
+[basicAuth](../../README.md#basicAuth), [Bearer](../../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

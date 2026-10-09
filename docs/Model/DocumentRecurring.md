@@ -1,4 +1,4 @@
-# # DocumentRecurring
+# DocumentRecurring
 
 ## Properties
 

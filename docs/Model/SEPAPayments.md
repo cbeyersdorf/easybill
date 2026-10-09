@@ -1,4 +1,4 @@
-# # SEPAPayments
+# SEPAPayments
 
 ## Properties
 

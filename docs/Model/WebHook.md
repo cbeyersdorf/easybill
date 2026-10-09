@@ -1,4 +1,4 @@
-# # WebHook
+# WebHook
 
 ## Properties
 

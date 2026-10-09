@@ -1,4 +1,4 @@
-# # PDFTemplate
+# PDFTemplate
 
 ## Properties
 

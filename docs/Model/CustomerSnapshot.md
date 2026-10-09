@@ -1,4 +1,4 @@
-# # CustomerSnapshot
+# CustomerSnapshot
 
 ## Properties
 
@@ -54,6 +54,7 @@ Name | Type | Description | Notes
 **number** | **string** | Automatically generated if empty/omitted and when no type in query is provided or the type &#39;CUSTOMER&#39;, &#39;CUSTOMER,SUPPLIER&#39; | [optional]
 **supplier_number** | **string** | Automatically generated if the type SUPPLIER or &#39;CUSTOMER,SUPPLIER&#39; is provided as query parameter and the field supplier_number is empty/omitted. | [optional]
 **payment_options** | **int** | 1 &#x3D; Stets pünktliche Zahlung, 2 &#x3D; überwiegend pünktliche Zahlung, 3 &#x3D; überwiegend verspätete Zahlung, 5 &#x3D; Grundsätzlich verspätete Zahlung | [optional]
+**payment_provider_mandate_status** | [**\cbeyersdorf\easybill\Model\PaymentProviderMandateStatus**](PaymentProviderMandateStatus.md) | State of the customer&#39;s SEPA direct debit mandate at the connected payment provider (e.g. Mollie). &#x60;valid&#x60; &#x3D; usable mandate; &#x60;pending&#x60; &#x3D; awaiting confirmation; &#x60;invalid&#x60; &#x3D; no longer usable; &#x60;revoking&#x60; &#x3D; a revocation triggered by a SEPA-relevant change is in progress. &#x60;null&#x60; if no mandate exists. | [optional]
 **personal** | **bool** |  | [optional] [default to false]
 **phone_1** | **string** |  | [optional]
 **phone_2** | **string** |  | [optional]

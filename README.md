@@ -146,6 +146,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**customersIdDelete**](docs/Api/CustomerApi.md#customersiddelete) | **DELETE** /customers/{id} | Delete customer
 *CustomerApi* | [**customersIdGet**](docs/Api/CustomerApi.md#customersidget) | **GET** /customers/{id} | Fetch customer
 *CustomerApi* | [**customersIdPut**](docs/Api/CustomerApi.md#customersidput) | **PUT** /customers/{id} | Update Customer
+*CustomerApi* | [**customersIdSepaMandateTransferPost**](docs/Api/CustomerApi.md#customersidsepamandatetransferpost) | **POST** /customers/{id}/sepa-mandate/transfer | Transfer the customer&#39;s SEPA mandate to the connected payment provider
 *CustomerApi* | [**customersPost**](docs/Api/CustomerApi.md#customerspost) | **POST** /customers | Create customer
 *CustomerGroupApi* | [**customerGroupsGet**](docs/Api/CustomerGroupApi.md#customergroupsget) | **GET** /customer-groups | Fetch customer group list
 *CustomerGroupApi* | [**customerGroupsIdDelete**](docs/Api/CustomerGroupApi.md#customergroupsiddelete) | **DELETE** /customer-groups/{id} | Delete customer group
@@ -181,6 +182,10 @@ Class | Method | HTTP request | Description
 *DocumentVersionApi* | [**documentsIdVersionsGet**](docs/Api/DocumentVersionApi.md#documentsidversionsget) | **GET** /documents/{id}/versions | List all versions of a given document
 *DocumentVersionApi* | [**documentsIdVersionsVersionIdGet**](docs/Api/DocumentVersionApi.md#documentsidversionsversionidget) | **GET** /documents/{id}/versions/{versionId} | Show a single version of a given document
 *DocumentVersionApi* | [**documentsIdVersionsVersionIdItemsVersionItemIdDownloadGet**](docs/Api/DocumentVersionApi.md#documentsidversionsversioniditemsversionitemiddownloadget) | **GET** /documents/{id}/versions/{versionId}/items/{versionItemId}/download | Download a specific file for a single version of a given document
+*IncomingDocumentApi* | [**incomingDocumentsGet**](docs/Api/IncomingDocumentApi.md#incomingdocumentsget) | **GET** /incoming-documents | Fetch incoming documents list
+*IncomingDocumentApi* | [**incomingDocumentsIdFilesFileIdDownloadGet**](docs/Api/IncomingDocumentApi.md#incomingdocumentsidfilesfileiddownloadget) | **GET** /incoming-documents/{id}/files/{fileId}/download | Download a file attached to an incoming document
+*IncomingDocumentApi* | [**incomingDocumentsIdFilesGet**](docs/Api/IncomingDocumentApi.md#incomingdocumentsidfilesget) | **GET** /incoming-documents/{id}/files | Fetch files list for an incoming document
+*IncomingDocumentApi* | [**incomingDocumentsIdGet**](docs/Api/IncomingDocumentApi.md#incomingdocumentsidget) | **GET** /incoming-documents/{id} | Fetch incoming document
 *LoginsApi* | [**loginsGet**](docs/Api/LoginsApi.md#loginsget) | **GET** /logins | 
 *LoginsApi* | [**loginsIdGet**](docs/Api/LoginsApi.md#loginsidget) | **GET** /logins/{id} | 
 *PdfTemplatesApi* | [**pdfTemplatesGet**](docs/Api/PdfTemplatesApi.md#pdftemplatesget) | **GET** /pdf-templates | Fetch PDF Templates list
@@ -237,6 +242,7 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [AdvancedDataField](docs/Model/AdvancedDataField.md)
 - [Attachment](docs/Model/Attachment.md)
 - [Attachments](docs/Model/Attachments.md)
 - [Contact](docs/Model/Contact.md)
@@ -246,6 +252,7 @@ Class | Method | HTTP request | Description
 - [CustomerGroups](docs/Model/CustomerGroups.md)
 - [CustomerSnapshot](docs/Model/CustomerSnapshot.md)
 - [Customers](docs/Model/Customers.md)
+- [CustomersIdSepaMandateTransferPost200Response](docs/Model/CustomersIdSepaMandateTransferPost200Response.md)
 - [Discount](docs/Model/Discount.md)
 - [DiscountPosition](docs/Model/DiscountPosition.md)
 - [DiscountPositionGroup](docs/Model/DiscountPositionGroup.md)
@@ -262,6 +269,13 @@ Class | Method | HTTP request | Description
 - [DocumentVersions](docs/Model/DocumentVersions.md)
 - [Documents](docs/Model/Documents.md)
 - [FileFormatConfig](docs/Model/FileFormatConfig.md)
+- [IncomingDocument](docs/Model/IncomingDocument.md)
+- [IncomingDocumentAccountingPosition](docs/Model/IncomingDocumentAccountingPosition.md)
+- [IncomingDocumentFile](docs/Model/IncomingDocumentFile.md)
+- [IncomingDocumentFiles](docs/Model/IncomingDocumentFiles.md)
+- [IncomingDocumentPayment](docs/Model/IncomingDocumentPayment.md)
+- [IncomingDocumentSupplier](docs/Model/IncomingDocumentSupplier.md)
+- [IncomingDocuments](docs/Model/IncomingDocuments.md)
 - [Login](docs/Model/Login.md)
 - [LoginSecurity](docs/Model/LoginSecurity.md)
 - [Logins](docs/Model/Logins.md)
@@ -270,6 +284,7 @@ Class | Method | HTTP request | Description
 - [PDFTemplateSettings](docs/Model/PDFTemplateSettings.md)
 - [PDFTemplateSettingsEmail](docs/Model/PDFTemplateSettingsEmail.md)
 - [PDFTemplates](docs/Model/PDFTemplates.md)
+- [PaymentProviderMandateStatus](docs/Model/PaymentProviderMandateStatus.md)
 - [Position](docs/Model/Position.md)
 - [PositionExportIdentifierExtended](docs/Model/PositionExportIdentifierExtended.md)
 - [PositionGroup](docs/Model/PositionGroup.md)
@@ -328,6 +343,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `1.94.0`
-    - Generator version: `7.18.0-SNAPSHOT`
+- API version: `1.100.0`
+    - Generator version: `7.24.0-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

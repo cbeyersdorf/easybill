@@ -1,4 +1,4 @@
-# # DocumentPayment
+# DocumentPayment
 
 ## Properties
 

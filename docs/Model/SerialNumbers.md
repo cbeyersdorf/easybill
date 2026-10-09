@@ -1,4 +1,4 @@
-# # SerialNumbers
+# SerialNumbers
 
 ## Properties
 

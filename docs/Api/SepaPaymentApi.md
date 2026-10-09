@@ -219,6 +219,8 @@ sepaPaymentsIdPut($id, $body): \cbeyersdorf\easybill\Model\SEPAPayment
 
 Update SEPA payment
 
+Updates a SEPA payment record prior to export. Does not execute any payment or collection.
+
 ### Example
 
 ```php
@@ -285,6 +287,8 @@ sepaPaymentsPost($body): \cbeyersdorf\easybill\Model\SEPAPayment
 ```
 
 Create SEPA payment
+
+Creates a SEPA payment record for later bank export. This only prepares the direct debit or transfer data - no money is collected or transferred by this endpoint. The exported file must be submitted to the bank by the user.
 
 ### Example
 

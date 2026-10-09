@@ -1,4 +1,4 @@
-# # PostBox
+# PostBox
 
 ## Properties
 
@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
 **document_id** | **int** |  | [optional]
-**to** | **string** |  | [optional]
-**cc** | **string** |  | [optional]
+**to** | **string** | Recipient(s). Multiple email recipients are returned separated by newline. | [optional]
+**cc** | **string** | Carbon copy recipient(s). Multiple email recipients are returned separated by newline. | [optional]
 **from** | **string** |  | [optional]
 **subject** | **string** |  | [optional]
 **message** | **string** |  | [optional]

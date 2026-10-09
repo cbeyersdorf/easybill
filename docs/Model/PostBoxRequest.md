@@ -1,11 +1,11 @@
-# # PostBoxRequest
+# PostBoxRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**to** | **string** |  | [optional]
-**cc** | **string** |  | [optional]
+**to** | **string** | Recipient(s). When sending via email, multiple addresses may be provided separated by comma, semicolon or newline. | [optional]
+**cc** | **string** | Carbon copy recipient(s) for email sends. Multiple addresses may be provided separated by comma, semicolon or newline. | [optional]
 **from** | **string** |  | [optional]
 **subject** | **string** |  | [optional]
 **message** | **string** |  | [optional]

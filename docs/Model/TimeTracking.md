@@ -1,4 +1,4 @@
-# # TimeTracking
+# TimeTracking
 
 ## Properties
 

@@ -1,10 +1,11 @@
-# # Document
+# Document
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | [**\cbeyersdorf\easybill\Model\DocumentAddress**](DocumentAddress.md) |  | [optional]
+**advanced_data_fields** | [**\cbeyersdorf\easybill\Model\AdvancedDataField[]**](AdvancedDataField.md) | EN16931 Business Terms (BT fields) for structured invoice data. On update the submitted list fully replaces the existing fields — send an empty array to clear all. | [optional]
 **attachment_ids** | **int[]** |  | [optional] [readonly]
 **label_address** | [**\cbeyersdorf\easybill\Model\DocumentAddress**](DocumentAddress.md) |  | [optional]
 **amount** | **int** | Amount in cents  (e.g. \&quot;150\&quot; &#x3D; 1.50€) | [optional] [readonly]
@@ -28,7 +29,7 @@ Name | Type | Description | Notes
 **customer_snapshot** | [**\cbeyersdorf\easybill\Model\CustomerSnapshot**](CustomerSnapshot.md) |  | [optional]
 **discount** | **string** |  | [optional] [default to 'null']
 **discount_type** | **string** |  | [optional] [default to 'null']
-**document_date** | **\DateTime** |  | [optional]
+**document_date** | **\DateTime** | Defaults to today&#39;s date when omitted. Can be null for draft documents: sending null stores null on a draft, while finalized documents always get a date. | [optional]
 **due_date** | **\DateTime** | To change the value use grace_period. | [optional] [readonly]
 **edited_at** | **\DateTime** |  | [optional] [readonly]
 **external_id** | **string** |  | [optional] [default to 'null']
@@ -37,7 +38,7 @@ Name | Type | Description | Notes
 **due_in_days** | **int** | due date in days. If not provided, inherits from customer when available | [optional]
 **id** | **int** |  | [optional] [readonly]
 **is_acceptable_on_public_domain** | **bool** | Indicates if a document can be accepted by the end customer through the document&#39;s public access page. | [optional] [default to false]
-**is_archive** | **bool** |  | [optional] [default to false]
+**is_archive** | **bool** | Marks the document as archived. Can be toggled even on finalized (non-editable) documents when sent as the only field. Draft documents cannot be archived. | [optional] [default to false]
 **is_draft** | **bool** | This property is read only. To finish the document call /documents/{id}/done. | [optional] [readonly]
 **is_replica** | **bool** | Marks a document as a replica from another software. | [optional] [default to false]
 **is_oss** | **bool** | Indicates if a document is a one-stop-shop document | [optional] [default to false]
@@ -52,6 +53,8 @@ Name | Type | Description | Notes
 **paid_at** | **\DateTime** |  | [optional] [readonly]
 **pdf_pages** | **int** |  | [optional] [readonly]
 **pdf_template** | **string** | Default template is null or &#39;DE&#39;, default english is &#39;EN&#39; and for all others use the numeric template ID. | [optional]
+**payment_link_enabled** | **bool** | Whether the payment link is shown on this document. Overrides the setting from the referenced template. | [optional] [default to false]
+**payment_link_locale** | **string** | Language of the payment link text on the document. | [optional] [default to 'de']
 **project_id** | **int** |  | [optional]
 **recurring_options** | [**\cbeyersdorf\easybill\Model\DocumentRecurring**](DocumentRecurring.md) |  | [optional]
 **ref_id** | **int** | Reference document id | [optional]

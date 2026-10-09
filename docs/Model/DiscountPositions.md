@@ -1,4 +1,4 @@
-# # DiscountPositions
+# DiscountPositions
 
 ## Properties
 

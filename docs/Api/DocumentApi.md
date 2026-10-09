@@ -194,6 +194,8 @@ documentsIdDelete($id)
 
 Delete document
 
+Deletes a document. Drafts can always be deleted. Finalized invoices and their cancellation documents cannot be deleted (German GoBD retention rules) - cancel an invoice via POST /documents/{id}/cancel instead. Other finalized document types (e.g. offers) remain deletable.
+
 ### Example
 
 ```php
@@ -257,6 +259,8 @@ documentsIdDonePut($id, $reason_for_change): \cbeyersdorf\easybill\Model\Documen
 ```
 
 To complete a document.
+
+Not allowed for documents of type `RECURRING`. Recurring documents cannot be finalized; update the document with the desired recurring status instead (`PUT /documents/{id}` with `recurring_options.status`).
 
 ### Example
 

@@ -1,4 +1,4 @@
-# # ServiceDate
+# ServiceDate
 
 ## Properties
 

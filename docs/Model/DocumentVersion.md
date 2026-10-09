@@ -1,4 +1,4 @@
-# # DocumentVersion
+# DocumentVersion
 
 ## Properties
 

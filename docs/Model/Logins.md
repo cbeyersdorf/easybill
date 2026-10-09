@@ -1,4 +1,4 @@
-# # Logins
+# Logins
 
 ## Properties
 

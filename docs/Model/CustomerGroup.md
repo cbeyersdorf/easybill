@@ -1,4 +1,4 @@
-# # CustomerGroup
+# CustomerGroup
 
 ## Properties
 
